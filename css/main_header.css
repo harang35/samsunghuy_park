@@ -1,0 +1,89 @@
+/* 전체 페이지 설정 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+/* 헤더 네비게이션 스타일 */
+div.navigation {
+  position: fixed;
+  top: 5%; /* 화면 상단에서의 위치 */
+  right: 3%; /* 화면 오른쪽에서의 위치 */
+  gap: 20px; /* flexbox 레이아웃에서 요소 간의 간격 */
+  display: flex; /* 요소를 가로로 정렬 */
+  z-index: 1000; /* 모든 요소 위에 표시 */
+}
+
+.navigation button {
+  background: none;
+  border: none;
+}
+
+.navigation button:last-child {
+  margin-right: 20px;
+}
+
+.navigation a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  text-decoration: none;
+  color: white; /* 아이콘 색상 */
+  border: 1px solid white; /* 흰색 테두리 추가 */
+  border-radius: 50%; /* 원형 버튼 */
+  text-decoration: none;
+}
+
+.navigation a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%; /* 원형  */
+}
+
+button .head-icon {
+  font-size: 18px;
+}
+
+/* 네비게이션 공유 목록 스타일 */
+#navigation_share {
+  display: none; /* 기본적으로 숨김 */
+  position: fixed; /* 전체화면 기준으로 화면에 고정 */
+  top: 9.5%; /* 화면 상단에서 공유버튼 아래 위치 */
+  right: 3%; /* 화면 오른쪽에서 위치 */
+  border-radius: 8px;
+  padding: 10px;
+  width: 78px;
+  z-index: 9999; /* 최상위 요소로 설정 */
+}
+
+#navigation_share.active {
+  display: block; /* 활성화 시 보이게 */
+}
+
+#navigation_share ul {
+  list-style: none;
+  padding: 0;
+}
+
+#navigation_share li {
+  margin: 5px 0;
+  text-align: center;
+}
+
+#navigation_share button {
+  background: none;
+  border: none;
+  cursor: pointer; /* 클릭 가능 손가락 모양 커서 */
+}
+
+.m_btn {
+  width: 30px;
+  height: 30px;
+}
+
+#navigation_share span {
+  display: none; /* span 내부 텍스트 숨기기 */
+}

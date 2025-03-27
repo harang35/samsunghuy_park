@@ -1,0 +1,71 @@
+/* 카드 스타일 */
+.cards-container {
+  display: flex;
+  flex-direction: row; /* 가로 배치 */
+  gap: 20px;
+  padding: 20px;
+  width: 1150px;
+  height: 600px;
+  overflow: hidden;
+  border: 2px solid red;
+}
+
+/* 개별 카드 스타일 */
+.card {
+  flex: 1; /* 기본적으로 균등한 크기 */
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out; /* 부드러운 애니메이션 */
+}
+
+/* 카드에 마우스를 올리면 커지고, 다른 카드들은 약간 작아짐 */
+.card:hover {
+  transform: scale(1.5); /* 마우스를 올리면 확대 */
+}
+
+/* 카드 이미지 */
+.card img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* 카드 안의 내용 */
+.card-content {
+  padding: 15px;
+  text-align: left;
+  overflow: hidden;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* VIEW MORE 스타일 */
+.btn {
+  display: inline-block;
+  padding: 8px 10px;
+  border: 1px solid white;
+  border-radius: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 0.7rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease-in-out;
+}
+
+.card:hover .btn {
+  opacity: 1;
+  transform: translateY(0);
+}

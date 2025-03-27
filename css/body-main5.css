@@ -1,0 +1,274 @@
+/* park5 기본 스타일 (PC) */
+section.park5 {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../image/mbody5_img3.jpg"); /* 배경 이미지 */
+  background-size: cover; /* 배경 이미지를 요소 크기에 맞게 크기 조정 */
+  background-position: center; /* 배경 이미지 위치를 중앙으로 설정 */
+  padding: 30px;
+  overflow: hidden;
+}
+
+.park5 div.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.park5 div.title-section {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.park5 .title-section h1 {
+  font-size: 2.3rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.park5 .title-section p {
+  font-size: 1.2rem;
+  line-height: 1.2;
+  overflow: hidden;
+}
+
+/* 3인 카드 스타일 */
+.park5 div.cards-container {
+  display: flex;
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  flex-direction: row; /* 가로 배치 */
+  gap: 20px;
+  padding: 10px;
+  width: 1200px;
+  height: 630px;
+  overflow: hidden;
+}
+
+/* 개별 카드 스타일 */
+.park5 div.card {
+  flex: 1; /* 기본적으로 균등한 크기 */
+  width: 100%;
+  height: 620px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: all 0.5s ease-in-out; /* 부드러운 카드 확장 애니메이션 */
+}
+
+/* 카드 이미지 */
+.park5 .card-image img {
+  width: 100%;
+  height: 400px;
+  padding: 10px;
+  margin-top: 0;
+  object-fit: cover; /* 이미지 비율 유지 */
+  object-position: top; /* 이미지 상단 정렬 */
+  transition: none; /* 이미지 확대 애니메이션 제거 */
+}
+
+/* 카드 내용 */
+.park5 .card-content {
+  height: 400px;
+  padding: 5px;
+  text-align: left;
+  overflow: hidden;
+  flex-grow: 1; /* 남은 공간 채우기 */
+}
+
+/* 카드 제목 (기본 표시) */
+.park5 .card-title {
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* 카드 내용 숨김  (처음에는 숨김) */
+.park5 .card-content .card-description {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  width: 100%;
+  height: 120px;
+  position: relative; /* VIEW MORE 버튼 위치 지정을 위해 */
+}
+
+/* 마우스 올리면 내용 표시 */
+.park5 .card:hover .card-description {
+  opacity: 1;
+  padding: 15px;
+  text-align: left;
+}
+
+/* 카드 확장 시 이미지 효과 */
+.park5 .card:hover .card-image img {
+  transform: none; /* 확대 효과 제거 */
+}
+
+/* 카드 확장 효과 */
+.park5 .card:hover {
+  flex: 1; /* 확대되는 크기 */
+  object-fit: cover; /* 이미지 비율 유지하면서 영역에 맞춤 */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* 나머지 카드 크기 축소 */
+.park5 .cards-container:hover .card:not(:hover) {
+  flex: 0.5; /* 마우스 올리지 않은 카드는 축소 */
+}
+
+/* VIEW MORE 스타일 */
+.park5 .btn {
+  width: 120px;
+  height: 33px;
+  display: inline-block;
+  padding: 3px;
+  border: 1px solid rgb(192, 191, 191);
+  border-radius: 20px;
+  color: rgb(172, 172, 172);
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease-in-out;
+  position: absolute; /* 절대 위치 지정 */
+  right: 10px; /* 오른쪽 끝에 배치 */
+  bottom: 0; /* 설명 텍스트 하단에 배치 */
+}
+
+.park5 .card:hover .btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.park5 .btn:hover {
+  background-color: rgba(167, 165, 165, 0.2);
+}
+
+/* 반응형 디자인 */
+/* 모바일 및 태블릿 스타일 */
+@media screen and (max-width: 990px) {
+  .park5 div.title-section {
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+
+  .park5 .title-section h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .park5 .title-section p {
+    font-size: 1rem;
+    line-height: 1.3;
+    line-height: 1.5;
+    overflow: hidden;
+  }
+
+  .park5 div.container {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .park5 div.cards-container {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    padding: 5px;
+    gap: 5px;
+  }
+
+  .park5 div.card {
+    flex: none;
+    width: 100%;
+    height: 180px; /* 모바일에서 카드 높이 조정 */
+    margin-bottom: 15px;
+    position: relative; /* 포지션 설정 확인 */
+  }
+
+  /* 카드 이미지 확인 */
+  .park5 .card-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  /* 세로로 3개, 내용 가운데 정렬 */
+  .park5 .card-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 250px;
+    text-align: center;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.2) 100%
+    ); /* 배경 더 진하게 */
+    z-index: 3; /* z-index 상향 조정 */
+    color: white;
+    display: block !important; /* 강제로 표시 */
+    opacity: 1 !important; /* 강제로 표시 */
+  }
+
+  .park5 .card-title {
+    font-size: 1.5rem;
+    text-align: center;
+    color: white;
+    margin-bottom: 5px;
+    display: block !important; /* 강제로 표시 */
+  }
+
+  /* 카드 설명 부분 세로 모드에서 표시 */
+  .park5 .card-content .card-description {
+    opacity: 1 !important; /* 강제로 표시 */
+    max-height: 150px !important;
+    height: auto !important;
+    overflow: auto;
+    text-align: left;
+    padding: 15px 0;
+    display: block !important; /* 강제로 표시 */
+    color: white;
+    overflow: hidden;
+  }
+
+  .park5 .card-description p {
+    font-size: 0.85rem;
+  }
+
+  /* VIEW MORE 버튼 위치 */
+  .park5 .btn {
+    opacity: 1 !important; /* 강제로 표시 */
+    width: 90px;
+    height: 26px;
+    font-size: 0.7rem;
+    transform: none;
+    display: inline-block !important;
+    right: 0;
+    bottom: 0;
+    color: white;
+    border: 1px solid white;
+  }
+
+  /* 호버 효과 제거 */
+  .park5 .card:hover {
+    flex: none;
+  }
+
+  .park5 .btn:hover {
+    background-color: rgba(248, 248, 248, 0.4);
+  }
+
+  .park5 .cards-container:hover .card:not(:hover) {
+    flex: none;
+  }
+}

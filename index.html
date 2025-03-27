@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>삼성현역사문화공원 소개</title>
+
+    <link rel="stylesheet" href="./css/main_header.css" />
+    <link rel="stylesheet" href="./css/body-main1.css" />
+    <link rel="stylesheet" href="./css/body-main2.css" />
+    <link rel="stylesheet" href="./css/body-main3.css" />
+    <link rel="stylesheet" href="./css/body-main4.css" />
+    <link rel="stylesheet" href="./css/body-main5.css" />
+    <link rel="stylesheet" href="./css/body-main6.css" />
+    <link rel="stylesheet" href="./css/body-main7.css" />
+    <link rel="stylesheet" href="./css/body-main8.css" />
+    <link rel="stylesheet" href="./css/body-main9.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <script src="./js/main_header.js" defer></script>
+    <script src="./js/body_main1.js" defer></script>
+    <script src="./js/body_main2.js" defer></script>
+    <script src="./js/body_main5.js" defer></script>
+
+    <!-- 제이쿼리 라이브러리 임포팅 -->
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <!-- bxslider 제이쿼리 적용 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        var slider = $(".slider").bxSlider({
+          mode: "fade",
+          auto: true,
+          autoControls: false, // 컨트롤러 버튼 숨김
+          stopAutoOnClick: true,
+          pager: false, // 페이저 숨김
+          speed: 800, // 전환시간
+          pause: 3500, // 지속시간
+          controls: false, // 🔹 화살표 버튼 숨김
+          startSlide: 0, // 명시적으로 첫 번째 슬라이드부터 시작
+          onSlideAfter: function ($slideElement, oldIndex, newIndex) {
+            $(".slide-count").text(newIndex + 1 + " ... 4"); // 현재 슬라이드 번호 업데이트
+          },
+        });
+
+        // bxSlider 강제 렌더링 (사진이 안 보이는 문제 해결)
+        setTimeout(function () {
+          slider.reloadSlider();
+        }, 500);
+      });
+    </script>
+  </head>
+
+  <body>
+      
+    <!-- 네비게이션  -->
+     <div class="hearder-navigation">
+      <div class="navigation">
+        <button class="home">
+          <a href="#bodymain1"><i class="fas fa-home head-icon"></i></a>
+        </button>
+        <button class="map">
+          <a
+            href="https://samseonghyeon.gbgs.go.kr/user/guide/way/index"
+            target="_blank"
+          >
+            <i class="fas fa-map-marker-alt head-icon"></i>
+          </a>
+        </button>
+        <button class="share">
+          <a href=""><i class="fas fa-share-alt head-icon"></i></a>
+        </button>
+      </div>
+
+      <!-- 공유 버튼 목록 -->
+      <div id="navigation_share">
+        <ul>
+          <li class="m facebook">
+            <button type="button" id="bt1facebook" title="새창열림">
+              <img class="m_btn" src="./image/head_fb.png" />
+              <span class="blind">페이스북 담기</span>
+            </button>
+          </li>
+          <li class="m twitter">
+            <button type="button" id="bt1twitter" title="새창열림">
+              <img class="m_btn" src="./image/head_tw.png" />
+              <span class="blind">트위터 담기</span>
+            </button>
+          </li>
+          <li class="m youtube">
+            <button type="button" title="새창열림">
+              <img class="m_btn" src="./image/head_ytube.png" />
+              <span class="blind">유튜브 담기</span>
+            </button>
+          </li>
+          <li class="m google">
+            <button type="button" title="새창열림">
+              <img class="m_btn" src="./image/head_gp.png" />
+              <span class="blind">구글플러스 담기</span>
+            </button>
+          </li>
+        </ul>
+        <a href="https://www.cng.go.kr/tour/upo.web#gn1share1" class="m_close"
+          ><span class="blind">공유 목록닫기</span></a
+        >
+      </div>
+      </div>
+
+    <!-- 메인1 헤더 -->
+    <section id="bodymain1" class="park1">
+      <!-- 왼쪽 페이지 도트 -->
+      <div class="dot-navigation">
+        <a href="#bodymain1" class="dot"></a>
+        <a href="#bodymain2" class="dot"></a>
+        <a href="#bodymain3" class="dot"></a>
+        <a href="#bodymain4" class="dot"></a>
+        <a href="#bodymain5" class="dot"></a>
+        <a href="#bodymain6" class="dot"></a>
+        <a href="#bodymain7" class="dot"></a>
+        <a href="#bodymain8" class="dot"></a>
+        <a href="#bodymain9" class="dot"></a>
+      </div>
+
+      <!-- 메인1 타이틀 -->
+      <div class="title">
+        <div class="title-container">
+          <h2>
+            전통과 문화<br />
+            놀이가 어우러진 복합문화공간
+          </h2>
+        </div>
+        <div class="title-content">
+          <h1>삼성현 역사 문화 공원</h1>
+          <div class="title-mascot_park1">
+            <img src="./image/mbody5_img2.png" class="mascot" alt="마스코트" />
+          </div>
+        </div>
+      </div>
+
+      <!-- 메인1 메뉴들 -->
+      <div class="menu">
+        <div class="menu-item">
+          <a href="#bodymain2" class="mtable">
+            <div class="menu-image">
+              <img src="./image/mbody2_img1.jpg" alt="삼성현역사 이미지" />
+            </div>
+            <div class="menu-text">
+              <span class="t1">삼성현역사문화<br />공원 소개</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="menu-item">
+          <a href="#bodymain3" class="mtable">
+            <div class="menu-image">
+              <img src="./image/mbody3_img1.jpg" alt="체험장 이미지" />
+            </div>
+            <div class="menu-text">
+              <span class="t1">체험장</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="menu-item">
+          <a href="#bodymain4" class="mtable">
+            <div class="menu-image">
+              <img src="./image/mbody4_img1.jpg" alt="정원 이미지" />
+            </div>
+            <div class="menu-text">
+              <span class="t1">정원과 정자</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="menu-item">
+          <a href="#bodymain5" class="mtable">
+            <div class="menu-image">
+              <img src="./image/mbody5_img1.jpg" alt="원효대사 이미지" />
+            </div>
+            <div class="menu-text">
+              <span class="t1">성현 3인</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="menu-item">
+          <a href="#bodymain6" class="mtable">
+            <div class="menu-image">
+              <img src="./image/mbody6_img1-0.png" alt="설충선생 이미지" />
+            </div>
+            <div class="menu-text">
+              <span class="t1">원효대사</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="menu-item">
+          <a href="#bodymain7" class="mtable">
+            <div class="menu-image">
+              <img src="./image/mbody7_img1-0.png" alt="일연선사 이미지" />
+            </div>
+            <div class="menu-text">
+              <span class="t1">설충선생</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="menu-item">
+          <a href="#bodymain8" class="mtable">
+            <div class="menu-image">
+              <img src="./image/mbody8_img1-0.png" alt="공원탐방 이미지" />
+            </div>
+            <div class="menu-text">
+              <span class="t1">일연선사</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="menu-item">
+          <a href="#bodymain9" class="mtable">
+            <div class="menu-image">
+              <img src="./image/mbody9_img1.jpg" alt="삼성현역사 이미지" />
+            </div>
+            <div class="menu-text">
+              <span class="t1"
+                >삼성현역사문화<br />
+                공원 탐방</span
+              >
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 메인2 -->
+    <section id="bodymain2" class="park2">
+      <!-- 왼쪽 이미지 -->
+      <div class="left-image">
+        <div class="slider_wrapper">
+          <div class="slider">
+            <div>
+              <img src="./image/mbody2_img1.jpg" alt="삼성현 이미지" />
+            </div>
+            <div>
+              <img src="./image/mbody2_img2.jpg" alt="삼성현 이미지" />
+            </div>
+            <div>
+              <img src="./image/mbody2_img3.jpg" alt="삼성현 이미지" />
+            </div>
+            <div>
+              <img src="./image/mbody2_img4.jpg" alt="삼성현 이미지" />
+            </div>
+          </div>
+        </div>
+
+        <div class="mascot-container_park2">
+          <img src="./image/mbody6_img2.png" class="mascot" alt="마스코트" />
+        </div>
+      </div>
+
+      <!-- 오른쪽 텍스트 -->
+      <div class="right-text">
+        <div class="text-over-image">
+          <h1>삼성현 역사 문화 공원 소개</h1>
+          <p>
+            삼성현역사문화공원은 여유시간이 있으면 자주 찾는 곳 입니다. <br />잘
+            가꾸어진 정원에는 계절마다 다양한 꽃이 피고, 곳곳에 설치된 정자에서
+            내려다보면 마음이 편안해집니다. 성현의 가르침을 되새기며 산책을
+            하거나 쉴 수도 있습니다.
+          </p>
+          <p>
+            경산시 남산면 인흥리, 아름다운 자라지와 포도밭, 복숭아밭, 대추밭으로
+            둘러싸인 26만4천여㎡ 규모의 큰 구릉지에 2015년 4월 30일 문을
+            열었습니다.
+          </p>
+          <p>
+            공원은 성현의 훌륭한 정신을 계승하고, 가치와 의미를 느낄 수 있도록
+            꾸민 전통과 문화, 놀이가 어우러진 복합문화공간입니다.
+          </p>
+          <button class="view-more">VIEW MORE</button>
+        </div>
+        
+        <div class="slide-count">1 ... 3</div>
+        <!-- 현재 슬라이드 번호 표시 -->
+      </div>
+    </section>
+
+    <!-- 메인3 -->
+    <section id="bodymain3" class="park3">
+      <!-- 왼쪽 텍스트 -->
+      <div class="left-text">
+        <div class="text-over-image">
+          <h1>삼성현 역사 문화 공원 체험장</h1>
+          <p>
+            레일 썰매장, 국궁 체험장, 삼성현 이야기 정원, 야외공연장,
+            어린이놀이터, 유아 숲체험원, 미로 정원, 연못, 바닥 분수대,
+            무궁화동산, 둘레길이 있습니다. 남녀노소 누구나 함께할 수 있어 가족
+            방문객이 많습니다.
+          </p>
+          <p>
+            그네와 널뛰기, 굴렁쇠, 투호와 바닥에 큼지막한 윷판이 그려져
+            전통놀이를 할수 있는 곳도 있습니다.
+          </p>
+          <p>
+            인근에 사직단이 있고, 최근에는 멀지 않은 곳에 동의 한방촌이 조성되어
+            한방체험도 할 수 있습니다.
+          </p>
+          <button class="view-more">VIEW MORE</button>
+        </div>
+        
+        <div class="slide-count">1 ... 3</div>
+        <!-- 현재 슬라이드 번호 표시 -->
+      </div>
+
+      <!-- 오른쪽 이미지 -->
+      <div class="right-image">
+        <div class="slider_wrapper">
+          <div class="slider">
+            <div>
+              <img src="./image/mbody3_img1.jpg" alt="삼성현 이미지" />
+            </div>
+            <div>
+              <img src="./image/mbody3_img2.jpg" alt="삼성현 이미지" />
+            </div>
+            <div>
+              <img src="./image/mbody3_img3.jpg" alt="삼성현 이미지" />
+            </div>
+            <div>
+              <img src="./image/mbody3_img4.jpg" alt="삼성현 이미지" />
+            </div>
+          </div>
+          <div class="slide-count">1 ... 3</div>
+          <!-- 현재 슬라이드 번호 표시 -->
+        </div>
+
+        <div class="mascot-container_park3">
+          <img src="./image/mbody7_img2.png" class="mascot" alt="마스코트" />
+        </div>
+      </div>
+    </section>
+
+    <!-- 메인4 -->
+    <section id="bodymain4" class="park4">
+      <!-- 전체 이미지 -->
+      <div class="slider_wrapper">        
+       <div class="overlay"></div> <!-- 투명 레이어 추가 -->
+        <div class="slider">
+          <div>
+            <img src="./image/mbody4_img1.jpg" alt="삼성현 정자" />
+          </div>
+          <div>
+            <img src="./image/mbody4_img2.jpg" alt="삼성현 정자" />
+          </div>
+          <div>
+            <img src="./image/mbody4_img3.jpg" alt="삼성현 정자" />
+          </div>
+          <div>
+            <img src="./image/mbody4_img4.jpg" alt="삼성현 정자" />
+          </div>
+        </div>
+        <div class="slide-count">1 ... 3</div>
+        <!-- 현재 슬라이드 번호 표시 -->
+      </div>
+
+      <div class="mascot-container_park4">
+        <img src="./image/mbody8_img2.png" class="mascot" alt="마스코트" />
+      </div>
+
+      <!-- 이미지 위 왼쪽 텍스트 -->
+      <div class="text-box">
+        <h1>삼성현 역사 문화 공원 정원과 정자</h1>
+        <p>
+          무궁화동산 위쪽의 높다란 정자의 전망대에서 내려다본 풍경이 풍성합니다.
+          <br />산책 나온 어르신들이 연못가 꽃밭을 거닐고, 야외공연장에는 중년의
+          여인들이 둘러앉아 있습니다. 휴일을 맞아 나들이 나온 가족들이 그늘막과
+          잔디 위에 텐트를 치고 아이들과 엄마 아빠가 도란도란 나누는 소리도
+          들려옵니다. 동산과 둘레길 곳곳에 정자와 평상, 벤치들을 만날수
+          있습니다.
+        </p>
+        <br />
+        <p>
+          비눗방울을 날리며 까르르 웃는 아이, 염주 모양의 조형물 위로 비틀거리며
+          걸어 다니는 아이, 미로 정원에서 길을 찾고 종을 울리는 아이, 그네 타고,
+          굴렁쇠 굴리고, 자전거 타고 제각각 바쁜 모습입니다. 원효대사는 무엇에도
+          방해받지 않는 자유로움을 무애(無碍)라 했습니다.
+        </p>
+        <br />
+        <p>
+          푸른 하늘 아래서 맘껏 뛰노는 아이들의 몸짓에서 무애무를 추던
+          원효대사의 모습을 떠올립니다.
+        </p>
+        <br />
+        <button class="view-more">VIEW MORE</button>
+      </div>
+    </section>
+
+    <!-- 메인5 -->
+    <section id="bodymain5" class="park5">
+      <div class="container">
+        <div class="title-section">
+          <h1>성현 3인</h1>
+          <p>
+            삼성현에는 한국 불교의 첫 새벽을 열고 대중화한 화쟁국사 원효, 유학을
+            우리 화하고 이두를 집대성한 설총, 삼국유사 집필로 우리 민족 역사관을
+            세운 보각국사 일연 세 분 성현의 초상화가 그려져 있습니다.
+          </p>
+        </div>
+
+        <div class="cards-container">
+          <div class="card">
+            <div class="card-image">
+              <img src="./image/mbody6_img1.PNG" alt="원효대사" />
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">원효대사</h3>
+              <div class="card-description">
+               <h3> 화쟁국사 원효</h3><br>
+                <p>한국 불교의 첫 새벽을 열다. 
+                마음이 생기면 온갖 법이 생기고,
+                마음이 사라지면 동굴과 무덤이 다르지 않다. </p>
+                <a href="#bodymain6" class="btn">VIEW MORE</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image">
+              <img src="./image/mbody7_img1.PNG" alt="설충선생" />
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">설총선생</h3>
+              <div class="card-description">
+                <h3>홍유후 설총</h3><br>
+               <p> 유학을 우리화 하다</p>
+                <a href="#bodymain7" class="btn">VIEW MORE</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image">
+              <img src="./image/mbody8_img1.PNG" alt="일연선사" />
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">일연선사</h3>
+              <div class="card-description">
+              <h3>보각국사 일연</h3><br>
+              <p>우리민족의 역사관을 세우다</p>
+                <a href="#bodymain8" class="btn">VIEW MORE</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 메인6-->
+    <section id="bodymain6" class="park6">
+      <!-- 왼쪽 텍스트 -->
+      <div class="left-text">
+        <div class="text-over-image">
+          <h1>원효대사</h1>
+          <p>우리나라 불교 역사에 큰 발자취를 남긴 인물입니다. 원효와 의상은
+            모든 백성이 평등하게 부처님의 가르침을 받는 이상사회를 만들기
+            위해 실천하여 신라 불교의 전성기를 연 역사인물 입니다.</p>
+          <p>
+            역사문화관 오른편 체험장으로 가는 길에 원효, 의상 두 스님이
+            당나라로 유학길 떠나는 모습과 해골 물을 마시는 원효 모형의 동상이
+            있습니다. 원효대사는 의상과 함께 당나라로 유학을 하러
+            가던 도중에 날이 저물어 인적 없는 산속에서 바람과 한기를
+            피하려 무덤 사이에서 잠을 청하였고, 밤중에 심한 갈증을 느낀 원효가
+            주변에 있던 바가지의 물을 마셨는데 이튿날 잠에서 깨어나 주위를
+            살펴보니 해골바가지만 보였다고 합니다.
+          </p>
+          <p>
+            달콤했던 물이 해골 안에 고여 썩은 빗물이었다는 것을 알고 갑자기
+            메스꺼워져 토하기 시작했는데 그 순간 문득 깨달음을 얻었다고 합니다.
+          </p>
+
+          <button class="view-more">VIEW MORE</button>
+        </div>
+        
+        <div class="slide-count">1 ... 3</div>
+        <!-- 현재 슬라이드 번호 표시 -->
+      </div>
+
+      <!-- 오른쪽 이미지 -->
+      <div class="right-image">
+        <div class="slider_wrapper">
+          <div class="slider">
+            <div>
+              <img src="./image/mbody6_img1-1.jpg" alt="원효대사" />
+            </div>
+            <div>
+              <img src="./image/mbody6_img3.jpg" alt="원효대사" />
+            </div>
+            <div>
+              <img src="./image/mbody6_img4.jpg" alt="원효대사" />
+            </div>
+            <div>
+              <img src="./image/mbody6_img5.jpg" alt="원효대사" />
+            </div>
+          </div>
+        </div>
+
+        <div class="mascot-container_park6">
+          <img src="./image/mbody6_img2.png" class="mascot" alt="마스코트" />
+        </div>
+      </div>
+    </section>
+
+    <!-- 메인7 -->
+    <section id="bodymain7" class="park7">
+      <!-- 왼쪽 이미지 -->
+      <div class="left-image">
+        <div class="slider_wrapper">
+          <div class="slider">
+            <div>
+              <img src="./image/mbody7_img1-1.jpg" alt="설총선생" />
+            </div>
+            <div>
+              <img src="./image/mbody7_img3.jpg" alt="설총선생" />
+            </div>
+            <div>
+              <img class="slide" src="./image/mbody7_img4.jpg" alt="설총선생" />
+            </div>
+            <div>
+              <img class="slide" src="./image/mbody7_img5.jpg" alt="설총선생" />
+            </div>
+          </div>
+          </div>
+
+        <div class="mascot-container_park7">
+          <img src="./image/mbody7_img2.png" class="mascot" alt="마스코트" />
+        </div>
+      </div>
+
+      <!-- 오른쪽 텍스트 -->
+      <div class="right-text">
+        <div class="text-over-image">
+          <h1>설총선생</h1>
+          <p>서울 성균관과 시장 향교의 문묘에서 신라 2현으로 모시는 역사인물
+            입니다. 자신의 생각을 담은 뛰어난 글을 지어 임금에게
+            전달하였으며 설총이 남긴 글은 지금까지 전해지면서 우리에게
+            도덕적으로 많은 교휸을 주고 있습니다.</p>
+          <p>
+            삼성현역사문화공원은 여유시간이 있으면 자주 찾는 곳이다. <br />잘
+            가꾸어진 정원에는 계절마다 다양한 꽃이 피고, 곳곳에 설치된 정자에서
+            내려다보면 마음이 편안해진다. 성현의 가르침을 되새기며 산책을 하거나
+            쉴 수도 있다.
+          </p>
+          <p>
+            경산시 남산면 인흥리, 아름다운 자라지와 포도밭, 복숭아밭, 대추밭으로
+            둘러싸인 26만4천여㎡ 규모의 큰 구릉지에 2015년 4월 30일 문을 열었다.
+          </p>
+          <button class="view-more">VIEW MORE</button>
+        </div>
+        
+        <div class="slide-count">1 ... 3</div>
+        <!-- 현재 슬라이드 번호 표시 -->
+      </div>
+      </div>
+    </section>
+
+    <!-- 메인8 -->
+    <section id="bodymain8" class="park8">
+      <!-- 왼쪽 텍스트 -->
+      <div class="left-text">
+        <div class="text-over-image">
+          <h1>일연선사</h1>
+          <p>
+            [삼국유사]는 삼국의 역사를 서술한 대표적 역사서입니다. 이
+            역사서의 저자는 고려 최고 직위에 오른 일연입니다. 몽골의
+            침략으로 혼란한 사회에 대한 스스로의 반성에서 민족의 자주성을
+            강조한 역사서를 저술하였습니다.</p>
+          <p>
+            레일 썰매장, 국궁 체험장, 삼성현 이야기 정원, 야외공연장,
+            어린이놀이터, 미로 정원, 연못, 바닥 분수대, 무궁화동산, 둘레길이
+            있다. 남녀노소 누구나 함께할 수 있어 가족 방문객이 많다.
+          </p>
+          <p>
+            인근에 사직단이 있고, 최근에는 멀지 않은 곳에 동의 한방촌이 조성되어
+            한방체험도 할 수 있다.
+          </p>
+          <button class="view-more">VIEW MORE</button>
+        </div>        
+
+        <div class="slide-count">1 ... 3</div>
+        <!-- 현재 슬라이드 번호 표시 -->
+      </div>
+      </div>
+
+      <!-- 오른쪽 이미지 -->
+      <div class="right-image">
+        <div class="slider_wrapper">
+          <div class="slider">
+            <div>
+              <img src="./image/mbody8_img1-1.jpg" alt="일연선사" />
+            </div>
+            <div>
+              <img src="./image/mbody8_img3.jpg" alt="일연선사" />
+            </div>
+            <div>
+              <img class="slide" src="./image/mbody8_img4.jpg" alt="일연선사" />
+            </div>
+            <div>
+              <img class="slide" src="./image/mbody8_img5.jpg" alt="일연선사" />
+            </div>
+          </div>
+
+        <div class="mascot-container_park8">
+          <img src="./image/mbody8_img2.png" class="mascot" alt="마스코트" />
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- 메인9 -->
+    <section id="bodymain9" class="park9">
+      <!-- 전체 이미지 -->
+      <div class="slider_wrapper">         
+       <div class="overlay"></div> <!-- 투명 레이어 추가 -->
+        <div class="slider">
+          <div>
+            <img class="slide" src="./image/mbody9_img1.jpg" alt="삼성현" />
+          </div>
+          <div>
+            <img class="slide" src="./image/mbody9_img2.jpg" alt="삼성현" />
+          </div>
+          <div>
+            <img class="slide" src="./image/mbody9_img3.jpg" alt="삼성현" />
+          </div>
+          <div>
+            <img class="slide" src="./image/mbody9_img4.jpg" alt="삼성현" />
+          </div>
+        </div>
+      </div>
+
+      <div class="mascot-container_park9">
+        <img src="./image/mbody5_img2.png" class="mascot" alt="마스코트" />
+      </div>
+
+      <!-- 이미지 위 왼쪽 텍스트 -->
+      <div class="text-box">
+        <h1>삼성현 역사 문화 공원 이야기</h1>
+        <p>
+          삼국유사에는 무애가를 부르며 가는한 백성들에게 불법을 전한 원효대사와
+          아버지 원효가 입적하자 유해로 인물상을 만들어 분황사에 모시고 때때로
+          그곳에 들러 슬픔을 표한 설총의 이야기도 실려 있습니다. 600년 뒤에 같은
+          고장에서 태어난 일연과 원효, 설총. 세분 성현은 아마 시대를 건너
+          영혼으로 연결된 듯합니다.
+        </p>
+        <br />
+        <p>
+          전통과 현대가 어우러진 신나는 퓨전국악 공연이 이곳 야외공연장에서 열린
+          공연도 하고 있습니다. 팔도 아리랑 배워 보기와 국악 연주에 맞춰 동요
+          부르는 시간도 있어 구경만 하는 공연이 아니라 함께 참가할 수 있어 더
+          재미있습니다.
+        </p>
+        <br />
+        <p>
+          지혜를 키우는 꽃동산에는 5월에 접어들면 장미가 한창 꽃을 피웁니다. 그
+          앞으로는 꽃이 지고 잎이 무성한 모란과 할미꽃의 하얀 수염이 바람에
+          날리고, 설총의 '화왕계'에 등장하는 꽃들로 꾸며진 정원이 있습니다.
+        </p>
+        <br />
+        <button class="view-more">VIEW MORE</button>
+      </div>
+
+      <!-- 현재 슬라이드 번호 표시 -->
+      <div class="slide-count">1 ... 3</div>
+
+      
+      <!-- 푸터 -->
+      <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="./image/logo1.png" alt="안녕 삼성현">
+                </div>
+                <div class="footer-left">
+                    <div class="footer-links">
+                        <a href="#">개인정보처리방침</a> |
+                        <a href="#">저작권 정책</a> |
+                        <a href="https://samseonghyeon.gbgs.go.kr/user/guide/way/index"
+                        target="_blank">찾아오시는길</a>
+                    </div>
+                    <div class="footer-info">
+                        <p>경상북도 경산시 남산면 삼성현공원로 59<br>
+                        © samseonghyeon history and culture museum</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    </section>
+  </body>
+</html>
